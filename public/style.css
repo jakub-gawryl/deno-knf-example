@@ -1,0 +1,47 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+iframe {
+  display: block;
+  width: 800px;
+  height: 400px;
+  border: 1px solid #ddd;
+}
+
+#cdp {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  color:rgb(49, 87, 44);
+  background-color: rgb(234, 255, 231);
+}
+#cdp-list {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;  
+}
+#cdp-list * {
+  font-family: monospace;
+}
+#cdp-list .name {
+  display: inline-block;
+  min-width: 320px;
+}
+
+#cdp-list .paper {
+  display: inline-block;
+  min-width: 100px;
+}
+
+#cdp-list .value {
+  display: inline-block;
+  min-width: 80px;
+}
