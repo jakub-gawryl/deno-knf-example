@@ -1,7 +1,27 @@
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Client } from "https://deno.land/x/mysql/mod.ts";
 
-const configData = await config();
+type Config = {
+  DB_HOSTNAME: string;
+  DB_USERNAME: string;
+  DB_NAME: string;
+  DB_PASSWORD: string;
+};
+
+let configData: Config;
+
+try {
+  configData = await config() as Config;
+}
+catch (err) {
+  configData = {
+    DB_HOSTNAME: Deno.env.get('DB_HOSTNAME') || '',
+    DB_USERNAME: Deno.env.get('DB_USERNAME') || '',
+    DB_NAME: Deno.env.get('DB_NAME') || '',
+    DB_PASSWORD: Deno.env.get('DB_PASSWORD') || '',
+  };
+}
+
 
 const requiredKeys = [
   'DB_HOSTNAME',
@@ -10,7 +30,7 @@ const requiredKeys = [
   'DB_PASSWORD'
 ];
 
-const availableKeysLen = requiredKeys.filter(key => configData[key]).length;
+const availableKeysLen = requiredKeys.filter(key => configData[key as keyof Config]).length;
 const requiredKeysLen = requiredKeys.length;
 
 let dbClient: Client;
