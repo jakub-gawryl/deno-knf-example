@@ -45,3 +45,12 @@ iframe {
   display: inline-block;
   min-width: 80px;
 }
+
+#sc {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  background-color: #f5f5f5;
+}

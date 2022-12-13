@@ -8,6 +8,9 @@ Tech:
 - Plain HTML / CSS / JavaScript for front-end stuff
 - [Deno Opine framework](https://deno.land/x/opine@2.3.3) (as replacement for `express` - web application framework known from node environment)
 
+To run it locally:
+`deno run -A index.ts`
+
 # Demo
 
 Simple demo available on: https://knf-example.deno.dev/
