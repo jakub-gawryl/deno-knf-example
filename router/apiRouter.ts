@@ -1,6 +1,5 @@
-import { Router } from "https://deno.land/x/opine@2.3.3/mod.ts";
+import { Router } from "../deps.ts";
 import { getTotalShortValue } from "../helpers/index.ts";
-import { dbClient } from '../db/index.ts';
 import { ShortRecord } from "../types/index.ts";
 import { getLastRowFromDb } from "../helpers/getLastRowFromDb.ts";
 

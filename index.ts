@@ -1,4 +1,4 @@
-import { opine, serveStatic } from "https://deno.land/x/opine@2.3.3/mod.ts";
+import { opine, serveStatic } from "./deps.ts";
 import { router } from "./router/index.ts";
 import './cron/index.ts';
 import { getLastRowFromDb } from "./helpers/getLastRowFromDb.ts";

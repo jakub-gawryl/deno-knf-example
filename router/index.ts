@@ -1,4 +1,4 @@
-import { Router } from "https://deno.land/x/opine@2.3.3/mod.ts";
+import { Router } from "../deps.ts";
 import { apiRouter } from "./apiRouter.ts";
 
 const router = Router();

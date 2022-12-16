@@ -1,4 +1,4 @@
-import { cron } from 'https://deno.land/x/deno_cron/cron.ts';
+import { cron } from '../deps.ts';
 import { fetchAndStoreData } from './fetchAndStoreData.ts'
 
 // 1am every day
