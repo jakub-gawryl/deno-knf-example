@@ -1,4 +1,4 @@
-import { Router } from "../deps.ts";
+import { Router } from "../../deps.ts";
 import { apiRouter } from "./apiRouter.ts";
 
 const router = Router();

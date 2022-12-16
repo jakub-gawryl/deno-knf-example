@@ -1,0 +1,1 @@
+export { isDenoDeploy } from './isDenoDeploy.ts';
