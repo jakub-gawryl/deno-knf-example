@@ -1,6 +1,6 @@
 const knfHost = "https://rss.knf.gov.pl/RssOuterView/TXTServ";
 
-const fetchKnfData = (
+const _fetchKnfData = (
   historicalData = true,
   issuerName = '',
   fetchFunc = null
@@ -27,5 +27,5 @@ const fetchKnfData = (
 };
 
 export {
-  fetchKnfData
+  _fetchKnfData
 }

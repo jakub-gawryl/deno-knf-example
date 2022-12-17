@@ -1,1 +1,1 @@
-import './web/index.ts';
+import './web/server.ts';

@@ -1,4 +1,4 @@
-import { FetchedShortsRecord } from "../types/index.ts";
+import { FetchedShortsRecord } from "../types.ts";
 
 const COMMENT_CHAR = '#';
 const COL_DELIMITER = ';';
@@ -10,7 +10,7 @@ const removeEmpty = (input: string[]) => input.filter(item => item);
 
 const parseRow = (row: string): string[] => row.split(COL_DELIMITER).map(item => item.trim());
 
-const decodeKnfCsv = (input: string): Promise<FetchedShortsRecord[]> => {
+const _decodeKnfCsv = (input: string): Promise<FetchedShortsRecord[]> => {
   return new Promise((resolve, reject) => {
     const rows = removeComments(removeEmpty(input.split(ROW_DELIMITER)));
     const cols = rows.map(row => parseRow(row));
@@ -39,5 +39,5 @@ const decodeKnfCsv = (input: string): Promise<FetchedShortsRecord[]> => {
 };
 
 export {
-  decodeKnfCsv
+  _decodeKnfCsv
 }

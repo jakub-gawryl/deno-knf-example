@@ -1,6 +1,6 @@
 import { config } from "config.ts";
 import { Router } from "deps.ts";
-import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
+import { fetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
 
 const apiRouter = Router();
 
@@ -17,7 +17,7 @@ const emptyResponse = {
  * @path GET /api/short/list
  */
 apiRouter.get('/short/list/:name?/:value?', async (req, res) => {
-  const lastRow = await dbFetchedShorts.findOne({}, {
+  const lastRow = await fetchedShorts.findOne({}, {
     sort: {
       lastUpdated: -1
     }
@@ -59,7 +59,7 @@ apiRouter.get('/latest/:saveKey?', async (req, res) => {
   const saveKey = req?.params?.saveKey || '';
 
   if (saveKey.length > 0 &&  saveKey === config.utils.saveKey) {
-    await dbFetchedShorts.insertOne({
+    await fetchedShorts.insertOne({
       items: result,
       lastUpdated: new Date(),
       totalShortValue: getTotalShortValue(result)
