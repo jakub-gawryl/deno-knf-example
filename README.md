@@ -10,15 +10,15 @@ Tech:
 
 # How to use
 
-To run CRON task: `deno run -A cron/index.ts`
+To run CRON task: `deno run -A cron/index.ts` or `deno task cron`
 
 To run tasks in background mode (with save logs)
 `deno run -A cron/index.ts > cron.log &`
 to terminate process, see [this post on stackexchange](https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process)
 
-To run website with API and results preview type: `deno run -A index.ts`.
+To run website with API and results preview type: `deno run -A index.ts` or `deno task start`.
 
-API:
+# API
 - See recently fetched data: `/api/short/list/:name?/:value?`
   - you can filter by `'name', 'paper' or 'date'` eg. `/api/short/list/paper/CDPROJEKT`
 - Fetch and see latest data: `/api/latest/:saveKey?`

@@ -1,0 +1,7 @@
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "start": "deno run -A index.ts",
+    "cron": "deno run -A cron/index.ts"
+  }
+}

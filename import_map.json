@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "cron": "https://deno.land/x/deno_cron@v1.0.0/cron.ts",
+    "dotenv": "https://deno.land/x/dotenv@v3.2.0/mod.ts",
+    "opine": "https://deno.land/x/opine@2.3.3/mod.ts",
+    "mongo": "https://deno.land/x/mongo@v0.31.1/mod.ts"
+  }
+}
