@@ -1,6 +1,8 @@
-import { config } from "config.ts";
-import { Router } from "deps.ts";
-import { fetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
+import { config } from "config.ts"
+import { Router } from "deps.ts"
+import { fetchedShorts } from '@knf/collection/fetchedShorts.ts'
+import { fetchKnfRecords } from '@knf/fetchKnfRecords.ts'
+import { getTotalShortValue } from '@knf/utils/getTotalShortValue.ts'
 
 const apiRouter = Router();
 

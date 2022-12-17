@@ -1,4 +1,6 @@
-import { fetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
+import { fetchedShorts } from '@knf/collection/fetchedShorts.ts'
+import { fetchKnfRecords } from '@knf/fetchKnfRecords.ts'
+import { getTotalShortValue } from '@knf/utils/getTotalShortValue.ts'
 
 const fetchAndStoreData = async (): Promise<string> => {
   const result = await fetchKnfRecords();

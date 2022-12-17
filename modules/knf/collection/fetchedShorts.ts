@@ -1,6 +1,6 @@
-import { mongo } from "deps.ts";
-import { FetchedShorts } from "../types.ts";
-import { mongoDb } from "../src/mongoDb.ts"
+import { mongo } from "deps.ts"
+import { mongoDb } from "@mongoDb"
+import { FetchedShorts } from "../types.ts"
 
 interface FetchedShortsCollection extends FetchedShorts {
   _id: mongo.ObjectId;

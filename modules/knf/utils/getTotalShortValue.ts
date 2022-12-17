@@ -1,4 +1,4 @@
-import { FetchedShortsRecord } from "./types.ts";
+import { FetchedShortsRecord } from "../types.ts";
 
 const getTotalShortValue = (result: FetchedShortsRecord[]): number =>
   result.reduce((acc, item) => {
