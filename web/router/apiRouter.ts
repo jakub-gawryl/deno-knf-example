@@ -1,4 +1,4 @@
-import { config } from "../../common/config/index.ts";
+import { config } from "config.ts";
 import { Router } from "deps.ts";
 import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
 

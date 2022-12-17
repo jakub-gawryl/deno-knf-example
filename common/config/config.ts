@@ -1,5 +1,5 @@
-import { config as dotEnvConfig } from 'deps.ts';
-import { isDenoDeploy } from "../utils/isDenoDeploy.ts";
+import { config as dotEnvConfig } from "deps.ts";
+import { isDenoDeploy } from "/utils/isDenoDeploy.ts";
 
 // Load '.env' file for non deno deployment environments
 if (!isDenoDeploy) {
