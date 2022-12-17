@@ -1,4 +1,4 @@
-import { opine, serveStatic } from "../deps.ts";
+import { opine, serveStatic } from "deps.ts";
 import { router } from "./router/index.ts";
 
 const PORT = 8000;

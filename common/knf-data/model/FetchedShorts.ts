@@ -1,5 +1,5 @@
+import { mongo } from "deps.ts";
 import { FetchedShorts } from "../types/index.ts";
-import { mongo } from "../../../deps.ts";
 import { mongoDb } from "../../mongodb/index.ts"
 
 interface MongoFetchedShorts extends FetchedShorts {

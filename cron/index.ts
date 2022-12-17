@@ -1,4 +1,4 @@
-import { cron } from '../deps.ts';
+import { cron } from 'deps.ts';
 import { fetchAndStoreData } from './tasks/fetchAndStoreData.ts'
 
 console.log(`[${new Date().toLocaleString('pl-PL')}] CRON task manager started!`);

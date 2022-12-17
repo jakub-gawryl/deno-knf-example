@@ -1,6 +1,6 @@
 import { config } from "../../common/config/index.ts";
-import { Router } from "../../deps.ts";
-import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "../../local-deps.ts";
+import { Router } from "deps.ts";
+import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
 
 const apiRouter = Router();
 

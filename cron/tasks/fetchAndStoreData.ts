@@ -1,4 +1,4 @@
-import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "../../local-deps.ts";
+import { dbFetchedShorts, fetchKnfRecords, getTotalShortValue } from "local-deps.ts";
 
 const fetchAndStoreData = async (): Promise<string> => {
   const result = await fetchKnfRecords();
