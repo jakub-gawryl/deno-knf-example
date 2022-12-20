@@ -4,6 +4,10 @@ import { getTotalShortValue } from '@knf/utils/getTotalShortValue.ts'
 
 const fetchAndStoreData = async (): Promise<string> => {
   const result = await fetchKnfRecords();
+
+  if (!result.length) {
+    return '';
+  }
   
   const resId = await fetchedShorts.insertOne({
     items: result,

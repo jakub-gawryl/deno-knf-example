@@ -58,6 +58,12 @@ apiRouter.get('/short/list/:name?/:value?', async (req, res) => {
 apiRouter.get('/latest/:saveKey?', async (req, res) => {
   const result = await fetchKnfRecords();
 
+  if (!result.length) {
+    return res.json({
+      error: 'No data. Technnical break possible...'
+    });
+  }
+
   const saveKey = req?.params?.saveKey || '';
 
   if (saveKey.length > 0 &&  saveKey === config.utils.saveKey) {
